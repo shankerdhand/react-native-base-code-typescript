@@ -6,15 +6,14 @@ import {AppThemeModel} from '../../../utitles/models';
 import {withTheme} from '../../../utitles/theme/theme-provider/withTheme';
 
 export interface IHelloProps {
-    goNext: () => {};
     theme: AppThemeModel;
 }
 
-const HelloBase = ({goNext, theme}: IHelloProps) => {
-    return <Base goNext={goNext} title="Welcome to Klug Saver">
+const HelloBase = ({theme}: IHelloProps) => {
+    return <Base title="The App Ustad">
         <View>
-            <Image style={styles(theme).img} source={require('./img/welcome.png')}/>
-            <Text style={styles(theme).text}>Track your expenses freely and anonymously</Text>
+            <Image style={styles(theme).img} source={require('./img/app_ustad.png')}/>
+            <Text style={styles(theme).text}>{"Learn Basic Structure \n\n React-Native Application"}</Text>
         </View>
     </Base>;
 };
@@ -29,7 +28,8 @@ const styles = (theme: AppThemeModel) => {
     return StyleSheet.create({
         img: {
             maxWidth: imgWidth,
-            maxHeight: imgHeight
+            maxHeight: imgHeight,
+            alignSelf: 'center'
         },
         text: {
             ...textStyleBase(theme),

@@ -6,12 +6,11 @@ import {withTheme} from '../../../utitles/theme/theme-provider/withTheme';
 import Base from './Base';
 
 export interface IHowItWorksProps {
-    goNext: () => {};
     theme: AppThemeModel;
 }
 
-const HowItWorksBase = ({goNext, theme}: IHowItWorksProps) => {
-    return <Base goNext={goNext} title="How It Works">
+const HowItWorksBase = ({theme}: IHowItWorksProps) => {
+    return <Base title="How It Works">
         <View style={styles(theme).root}>
             <Text style={styles(theme).text}>All expenses are saved in your phone's memory. Nothing is transmitted to
                 any third party service. This also means that if you lose your phone or delete the app, all your data
@@ -34,7 +33,6 @@ export default withTheme(HowItWorksBase);
 
 const styles = (theme: AppThemeModel) => StyleSheet.create({
     root: {
-        justifyContent: 'center',
         backgroundColor: theme.backgroundMainColor,
         paddingHorizontal: 30
     },

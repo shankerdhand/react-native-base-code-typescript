@@ -2,7 +2,7 @@ import {ThemeType} from '../constants/common';
 import {AppThemeModel} from '../models';
 
 const dark: AppThemeModel = {
-    backgroundMainColor: '#1b2c42',
+    backgroundMainColor: '#375e8d',
     textMainColor: '#FFFFFF',
     textSecondaryColor: '#dadcdf',
     accentMainColor: '#4ccc9a',

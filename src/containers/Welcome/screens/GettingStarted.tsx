@@ -10,14 +10,17 @@ export interface IGettingStartedProps {
     theme: AppThemeModel;
 }
 
-const GettingStartedBase = ({goNext, theme}: IGettingStartedProps) => {
-    return <Base goNext={goNext} title="">
+const GettingStartedBase = ({theme}: IGettingStartedProps) => {
+    return <Base title="">
         <View style={styles(theme).root}>
-            <Text style={styles(theme).title}>Swipe left and right to navigate in between the 4 screens</Text>
-            <Text style={styles(theme).text}>Add Expense Screen</Text>
-            <Text style={styles(theme).text}>List of Expenses Screen</Text>
-            <Text style={styles(theme).text}>Statistics</Text>
-            <Text style={styles(theme).text}>Backup and Settings</Text>
+            <Text style={styles(theme).title}>Following Dependency used in Repo</Text>
+            <Text style={styles(theme).text}>Redux with Persist</Text>
+            <Text style={styles(theme).text}>React Navigation</Text>
+            <Text style={styles(theme).text}>React Native Swiper</Text>
+            <Text style={styles(theme).text}>Common Component</Text>
+            <Text style={styles(theme).text}>Common Theme Integration</Text>
+            <Text style={styles(theme).text}>Common Style Integration</Text>
+            <Text style={styles(theme).text}>Elint, Prettier</Text>
         </View>
     </Base>;
 };
@@ -26,7 +29,6 @@ export default withTheme(GettingStartedBase);
 
 const styles = (theme: AppThemeModel) => StyleSheet.create({
     root: {
-        justifyContent: 'center',
         backgroundColor: theme.backgroundMainColor
     },
     title: {
